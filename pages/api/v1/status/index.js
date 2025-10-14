@@ -1,7 +1,7 @@
 import database from "infra/database.js";
 
 async function status(request, response) {
-  const databaseVersion = await database.query("SHOW server_version");
+  const databaseVersion = await database.query("SHOW server_version;");
 
   const maxConnections = await database.query("SHOW max_connections;");
 
